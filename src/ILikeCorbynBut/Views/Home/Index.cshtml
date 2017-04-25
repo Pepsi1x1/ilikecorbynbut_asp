@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - I Like Corbyn, But...</title>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://ilikecorbynbut.com/"/>
+    <meta property="og:image" content="http://ilikecorbynbut.com/img/jeremy-corbyn-og.png"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@CodersForLabour">
+    <meta name="twitter:title" content="I Like Corbyn But...">
+    <meta name="twitter:description" content="If you're still unsure whether you should cast your vote for Jeremy, here are some responses to the most common misconceptions.">
+    <meta name="twitter:image" content="http://ilikecorbynbut.com/img/jeremy-corbyn-og.png">
+    <meta name="theme-color" content="#087ED7"/>
+    <link rel="icon" href="/favicon.ico">
+
+    <title>I Like Corbyn, But...</title>
+    <base target="_blank">
+
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:200,300,400,700,400italic'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/home.css"/>
+<!--
+<environment names="Development">
+    <link rel="stylesheet" href="~/css/home.css"/>
+</environment>
+<environment names="Staging,Production">
+    <link rel="stylesheet" href="~/css/home.min.css" asp-append-version="true"/>
+</environment>
+    -->
+    <style>
+        body {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<div id="gray-screen"></div>
+<div class="header-small">
+    <div class="volunteer-info">Created by <a href="http://www.codersforlabour.com/" title="Coders For Labour">volunteers</a> during the General Election campaign
+    </div>
+</div>
+<div class="header shadow">
+    <div class="header-text container">I Like Corbyn, But…<br>
+    </div>
+</div>
+<div class="main">
+    <div class="faq container"></div>
+    <div>
+        <div class="convinced-button" id="big-convinced">CONVINCED?</div>
+    </div>
+</div>
+<div class="table-of-contents">
+    <div class="toc-entry" id="top">GO TO TOP</div>
+    <div class="questions"></div>
+    <div class="toc-entry convinced-button" id="convinced">CONVINCED?</div>
+</div>
+<div class="footer">
+    <div class="not-the-billionaires"></div>
+    <div class="share-controls">
+        <br>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://ilikecorbynbut.com/"><img src="~/images/facebook.png"/></a>
+        <a href="http://twitter.com/intent/tweet?status=I Like Corbyn, But...+http://ilikecorbynbut.com/"><img src="~/images/twitter.png"/></a>
+        <a href="https://plus.google.com/share?url=http://ilikecorbynbut.com/"><img src="~/images/google.png"/></a>
+    </div>
+</div>
+<environment names="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+
+    
+    </script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+</environment>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/faq.js"></script>
+
+
+</body>
+</html>
+
+@section Scripts {
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/faq.js"></script>
+}

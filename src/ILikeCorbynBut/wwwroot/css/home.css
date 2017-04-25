@@ -1,0 +1,419 @@
+﻿/*
+
+    Customisations
+
+*/
+
+
+
+/*
+Red: rgb(245, 91, 91);
+White: rgb(255, 255, 255);
+Blue: rgb(8, 126, 215);
+*/
+
+html {
+	/* background: url("../img/jeremy-corbyn.jpg") no-repeat center center fixed; */
+	background: url("../images/corbyndof1.png") no-repeat center center fixed;
+	/* background: url("../img/4368ed.jpg") no-repeat center center fixed;*/
+
+	background-size: cover;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.container {
+	margin: 0 20%;
+}
+
+.shadow {
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#message {
+	width: 70%;
+	display: none;
+	position: absolute;
+	margin: 0 auto;
+	background-color: rgb(245, 91, 91);
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	border-radius: 5px;
+	z-index: 4;
+}
+
+#message .small {
+	margin-top: 10px;
+	font-size: 0.6em;
+}
+
+#close-message {
+	font: 30px "Roboto", sans-serif;
+	color: white;
+	position: absolute;
+	top: 5px;
+	right: 7px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+#message-text {
+	font: 24px "Roboto", serif;
+	padding: 34px;
+	text-align: center;
+	color: white;
+}
+
+#message-custom-text {
+	margin-top: 10px;
+}
+
+#gray-screen {
+	display: none;
+	background-color: #666;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 108px;
+	background-color:#da2c2c; /* #D3272E; */
+	color: rgb(255, 255, 255);
+	font: 48px "Roboto";
+	font-weight: 700;
+}
+
+.header-small{
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	font-size: medium;
+	font-weight: bold;
+	color: #fff;
+	font-family: "Roboto";
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #da2c2c;
+}
+
+.header-text {
+	position: absolute;
+	bottom: 4px;
+}
+
+.main {
+	width: 100%;
+}
+
+.faq {
+	margin-top: 40px;
+}
+
+.faq .entry {
+	font: 20px "Roboto";
+	margin: 40px 0 80px;
+}
+
+.question-container {
+	max-width: 55%;
+}
+
+.question {
+	position: relative;
+	display: inline-block;
+	padding: 20px;
+	background-color: #C7C7C7;
+	color: #f4f6f6; /* rgb(255, 255, 255); */
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	border-radius: 5px;
+}
+
+.question:after {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 50px;
+	border-width: 0 15px 15px;
+	border-style: solid;
+	border-color: #C7C7C7 transparent;
+	display: block;
+	width: 0;
+}
+
+.answer-container {
+	float: right;
+	margin-top: 20px;
+	max-width: 55%;
+}
+
+.answer {
+	position: relative;
+	display: inline-block;
+	padding: 20px;
+	/* background-color: #9A0201; */
+	background-color:#da2c2c;
+
+
+	color:#f4f6f6; /* rgb(255, 255, 255); */
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	border:#da2c2c solid thin;
+	border-radius: 5px;
+}
+
+.answer:after {
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	right: 50px;
+	border-width: 15px 15px 0;
+	border-style: solid;
+	border-color: #da2c2c transparent;
+	display: block;
+	width: 0;
+}
+
+
+.table-of-contents {
+	position: fixed;
+	top: 150px;
+	left: 0;
+	font: 14px "Roboto";
+	width: 15%;
+	min-width:165px;
+	padding: 10px 10px 10px 0;
+	box-sizing: border-box;
+	color: #333;
+	background-color: rgb(245, 245, 245);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	z-index: 2;
+	transition: left 0.3s ease;
+}
+
+.table-of-contents:hover {
+	left: 0 !important;
+}
+
+.questions {
+	margin-left: 10px;
+}
+
+.toc-entry {
+	margin: 5px 0;
+	padding: 5px;
+	border-left: 3px solid transparent;
+	cursor: pointer;
+}
+
+.toc-entry:hover {
+    background-color: #ffffff;
+    background-color: rgba(255,255,255,0.9);
+	color: rgb(30, 30, 30);
+	font-weight: bold;
+	transition: 0.2s all ease;
+}
+
+.toc-entry.selected {
+	/* background-color: rgb(245, 91, 91);
+	color: rgb(255, 255, 255);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	border-radius: 5px; */
+
+	border-left: 3px solid rgb(245, 91, 91);
+	font-weight: bold;
+}
+
+#top, #convinced {
+	font: 24px "Roboto";
+	font-weight: 100;
+	text-align: center;
+	background-color:#da2c2c; /* #9A0201; */
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin: 0;
+	color:#f4f6f6; /*white;*/
+}
+
+#convinced a, #big-convinced a {
+	text-decoration: none;
+}
+
+.convinced-button, .created-by {
+	cursor: pointer;
+}
+
+.share-controls {
+	width: 100%;
+	max-width: 200px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	text-align: center;
+	z-index: 0;
+}
+
+.share-controls img {
+	width: 48px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+.share-controls img:hover {
+	background-color: rgb(8, 126, 215);
+	background-size: 50%, 25%, 25%;
+}
+
+.footer {
+	width: 100%;
+	height: 275px;
+	padding: 50px 50px 50px 50px;
+	background-color: #D3272E;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+
+.created-by {
+	margin: 0 auto;
+	font: 24px "Roboto";
+	font-weight: 200;
+	width: 300px;
+	border: 1px solid white;
+	color: white;
+	padding: 10px 40px;
+}
+
+.not-the-billionaires {
+	margin: 10px auto;
+	width: 300px;
+	height: 105px;
+	background-image: url("../images/peoplepowered.png");
+	background-size: 100%;
+}
+
+#big-convinced {
+	font-family: "Roboto";
+	font-size: 32px;
+	margin: 0 auto 50px;
+	width: 250px;
+	padding: 20px;
+	background-color: /*#9A0201; */ #da2c2c;
+	color: rgb(255, 255, 255);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+	border-radius: 5px;
+	text-align: center;
+}
+
+#big-convinced:hover {
+	background-color: rgb(255, 120, 120);
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.display-inline {
+	display: inline !important;
+}
+
+#bernrate {
+	display: none;
+}
+
+.jcblack
+	{
+	font-weight:bold;
+	color:#000;
+	}
+
+@media (max-width: 800px) {
+	.header {
+		height: 160px;
+	}
+
+	.header-text {
+		padding: 10px;
+	}
+
+	.container {
+		margin: 5px;
+	}
+
+	.table-of-contents {
+		display: none;
+	}
+
+	.question-container, .answer-container {
+		max-width: 80%;
+	}
+
+	.share-controls {
+		display: none;
+	}
+
+	.created-by {
+		text-align: center;
+		width: 90%;
+		padding: 10px;
+	}
+
+	#message {
+    position: inherit;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 0;
+		background-color: #FEEFB3;
+		color: #9F6000;
+	}
+
+	#message-text {
+		padding: 12px;
+		font-size: 18px;
+		color: inherit;
+	}
+
+	#message-text a {
+		color: inherit;
+	}
+
+	#message .small {
+		font-size: 0.8em;
+	}
+
+	#close-message {
+		font-size: 60px;
+		margin-top: 10px;
+		margin-right: 10px;
+		color: inherit;
+	}
+
+	#gray-screen {
+		display: none !important;
+	}
+}
+
