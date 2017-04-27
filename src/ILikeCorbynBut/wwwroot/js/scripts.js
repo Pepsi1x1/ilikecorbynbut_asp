@@ -27,9 +27,7 @@ $(document).ready(function() {
 				}).removeClass('display-inline');
 			}
 		});
-	faq.forEach(function(entry, index) {
-		generateEntry(entry, index);
-	});
+
 	var followScroll = true;
 	$(".toc-entry").click(function() {
 		var index = this.id.match(/toc-entry-(.*)/);
@@ -51,7 +49,8 @@ $(document).ready(function() {
 			window.location.hash = "";
 		}
 	});
-	$(document).scroll(function() {
+	$(document).scroll(function () {
+        /*
 		if (followScroll) {
 			for (var i = 0; i < faq.length; i++) {
 				if ($(this).scrollTop() >= $("#entry-" + i).position().top + $("#entry-" + i - 1 + " .question").height() - 70) {
@@ -59,7 +58,7 @@ $(document).ready(function() {
 					$("#toc-entry-" + i).addClass("selected");
 				}
 			}
-		}
+		}*/
 		if ($(this).scrollTop() < $(".header").height()) {
 			$(".table-of-contents").css("top", $(".header").height() - $(this).scrollTop() + 50 + "px");
 		}

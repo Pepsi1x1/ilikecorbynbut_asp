@@ -8,6 +8,9 @@ namespace ILikeCorbynBut.Models
 {
     public class FaqViewModel
     {
+        [Key]
+        public int Id { get; set; }
+
         [Required]
         public string DivId { get; set; }
 

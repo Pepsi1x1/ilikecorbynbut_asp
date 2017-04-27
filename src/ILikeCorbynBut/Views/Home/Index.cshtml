@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<ILikeCorbynBut.Models.FaqViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
     Layout = "";
 }
@@ -51,14 +53,37 @@
     </div>
 </div>
 <div class="main">
-    <div class="faq container"></div>
+    <div class="faq container">
+        @foreach (var item in Model)
+        {
+            if (item.Publish)
+            {
+                <div class='entry clearfix' id='entry-@Html.Raw(item.Id)'>
+                    <div class='question-container'>
+                        <div class='question'>@Html.Raw(item.Question) </div>
+                    </div>
+                    <div class='answer-container'>
+                        <div class='answer'>@Html.Raw(item.Answer)</div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
     <div>
         <div class="convinced-button" id="big-convinced">CONVINCED?</div>
     </div>
 </div>
 <div class="table-of-contents">
     <div class="toc-entry" id="top">GO TO TOP</div>
-    <div class="questions"></div>
+    <div class="questions">
+        @foreach (var item in Model)
+        {
+            if (item.Publish)
+            {
+                <div class='toc-entry' id='toc-entry-@Html.Raw(item.Id)' data-question='@Html.Raw(item.DivId)'>@Html.Raw(item.Question)</div>
+            }
+        }
+    </div>
     <div class="toc-entry convinced-button" id="convinced">CONVINCED?</div>
 </div>
 <div class="footer">
@@ -84,13 +109,7 @@
     <script src="~/js/site.min.js" asp-append-version="true"></script>
 </environment>
     <script src="~/js/scripts.js"></script>
-    <script src="~/js/faq.js"></script>
 
 
 </body>
 </html>
-
-@section Scripts {
-    <script src="~/js/scripts.js"></script>
-    <script src="~/js/faq.js"></script>
-}
